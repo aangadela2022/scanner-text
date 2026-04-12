@@ -1,4 +1,4 @@
-import jsPDF from 'jspdf';
+import { jsPDF } from 'jspdf';
 
 /**
  * Export an array of pages (text) to a single PDF document.

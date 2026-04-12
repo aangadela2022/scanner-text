@@ -147,6 +147,10 @@ export default function App() {
   };
 
   const startCamera = async () => {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      alert("Camera API is not supported in this browser or requires a secure (HTTPS) connection.");
+      return;
+    }
     try {
       const mediaStream = await navigator.mediaDevices.getUserMedia({
         video: { facingMode: { ideal: "environment" } },

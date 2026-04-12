@@ -22,6 +22,8 @@
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
+  width: 100%;
   min-width: 320px;
   min-height: 100vh;
   background: var(--bg-gradient);
@@ -89,8 +91,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Layout Utilities */
 .container {
   max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 2rem;
+  }
 }
 
 .flex-center {
