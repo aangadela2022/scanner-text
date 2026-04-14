@@ -66,6 +66,7 @@ export default function App() {
   const [ocrProgress, setOcrProgress] = useState(0);
   const [language, setLanguage] = useState('ind+eng');
   const [isTableMode, setIsTableMode] = useState(false);
+  const [isHandwriting, setIsHandwriting] = useState(false);
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [stream, setStream] = useState(null);
 
@@ -149,7 +150,7 @@ export default function App() {
     setIsProcessing(true);
     setOcrProgress(0);
     try {
-      const text = await performOCR(imgSource, language, setOcrProgress, isTableMode);
+      const text = await performOCR(imgSource, language, setOcrProgress, isTableMode, isHandwriting);
       setOcrResult(text);
       setStep(4);
     } catch (e) {
@@ -527,6 +528,15 @@ export default function App() {
                     <input type="checkbox" checked={isTableMode} onChange={(e) => setIsTableMode(e.target.checked)} style={{ position: 'absolute', opacity: 0, width: 0, height: 0 }} />
                     <div style={{ width: '2.75rem', height: '1.5rem', background: isTableMode ? '#6366f1' : '#1e293b', borderRadius: '9999px', position: 'relative', transition: 'background 0.3s' }}>
                       <div style={{ position: 'absolute', top: '2px', left: isTableMode ? 'calc(100% - 22px)' : '2px', width: '1.25rem', height: '1.25rem', background: 'white', borderRadius: '50%', transition: 'left 0.3s' }} />
+                    </div>
+                  </label>
+                </div>
+                <div style={S.settingCard}>
+                  <span style={S.settingLabel}>Tulisan Tangan</span>
+                  <label style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', cursor: 'pointer' }}>
+                    <input type="checkbox" checked={isHandwriting} onChange={(e) => setIsHandwriting(e.target.checked)} style={{ position: 'absolute', opacity: 0, width: 0, height: 0 }} />
+                    <div style={{ width: '2.75rem', height: '1.5rem', background: isHandwriting ? '#a855f7' : '#1e293b', borderRadius: '9999px', position: 'relative', transition: 'background 0.3s' }}>
+                      <div style={{ position: 'absolute', top: '2px', left: isHandwriting ? 'calc(100% - 22px)' : '2px', width: '1.25rem', height: '1.25rem', background: 'white', borderRadius: '50%', transition: 'left 0.3s' }} />
                     </div>
                   </label>
                 </div>
