@@ -232,194 +232,190 @@ export default function App() {
   const S = {
     header: {
       textAlign: 'center',
-      paddingTop: '2.5rem',
+      paddingTop: '3.5rem',
       paddingBottom: '2.5rem',
-      animation: 'fadeIn 0.5s ease forwards'
     },
     h1: {
-      fontSize: '3rem',
+      fontSize: '4.2rem',
       fontWeight: '900',
       color: 'white',
       margin: '0 0 0.5rem 0',
-      letterSpacing: '-0.02em',
-      fontFamily: "'Poppins', sans-serif"
+      letterSpacing: '-0.04em',
+      background: 'linear-gradient(to right, #fff, #818cf8)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      fontFamily: "'Outfit', sans-serif"
     },
     subtitle: {
       color: '#94a3b8',
-      fontSize: '1rem',
-      margin: 0
+      fontSize: '1.2rem',
+      margin: 0,
+      maxWidth: '650px',
+      lineHeight: '1.6'
     },
     main: {
-      background: 'rgba(255,255,255,0.05)',
-      backdropFilter: 'blur(12px)',
-      WebkitBackdropFilter: 'blur(12px)',
-      border: '1px solid rgba(255,255,255,0.1)',
-      borderRadius: '1.5rem',
-      padding: '2rem',
-      minHeight: '500px',
+      background: 'rgba(15, 23, 42, 0.4)',
+      backdropFilter: 'blur(20px)',
+      WebkitBackdropFilter: 'blur(20px)',
+      border: '1px solid rgba(255,255,255,0.08)',
+      borderRadius: '2.5rem',
+      padding: '2.5rem',
+      minHeight: '600px',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-start',
       position: 'relative',
+      overflow: 'hidden',
+      boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+    },
+    hero: {
+      textAlign: 'center',
+      marginBottom: '3.5rem',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '0.875rem'
+    },
+    tag: {
+      background: 'rgba(99, 102, 241, 0.15)',
+      color: '#818cf8',
+      padding: '0.5rem 1.25rem',
+      borderRadius: '9999px',
+      fontSize: '0.75rem',
+      fontWeight: '800',
+      letterSpacing: '0.05em',
+      textTransform: 'uppercase',
+      border: '1px solid rgba(99, 102, 241, 0.2)'
+    },
+    cardGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '2rem',
+      width: '100%',
+      maxWidth: '900px',
+      marginBottom: '3.5rem'
+    },
+    actionCard: {
+      background: 'rgba(30, 41, 59, 0.3)',
+      border: '1px solid rgba(255, 255, 255, 0.05)',
+      borderRadius: '2rem',
+      padding: '2.5rem',
+      cursor: 'pointer',
+      textAlign: 'left',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1.25rem',
+      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+      position: 'relative',
       overflow: 'hidden'
     },
-    btnGrid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-      gap: '1.5rem',
-      width: '100%',
-      maxWidth: '800px',
-      marginBottom: '2.5rem'
-    },
-    btnPrimary: {
-      background: '#6366f1',
-      color: 'white',
-      border: 'none',
-      padding: '1.5rem 1rem',
+    cardIcon: {
+      width: '4rem',
+      height: '4rem',
       borderRadius: '1.5rem',
-      fontWeight: '600',
-      fontSize: '1.1rem',
-      cursor: 'pointer',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: '0.75rem',
-      boxShadow: '0 4px 15px rgba(99,102,241,0.4)',
-      transition: 'all 0.2s'
+      color: 'white'
     },
-    btnSecondary: {
-      background: '#1e293b',
+    cardTitle: {
+      fontSize: '1.6rem',
+      fontWeight: '900',
       color: 'white',
-      border: '1px solid rgba(255,255,255,0.1)',
-      padding: '1.5rem 1rem',
-      borderRadius: '1.5rem',
-      fontWeight: '600',
-      fontSize: '1.1rem',
-      cursor: 'pointer',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '0.75rem',
-      transition: 'all 0.2s'
+      margin: 0
+    },
+    cardDesc: {
+      fontSize: '0.95rem',
+      color: '#94a3b8',
+      margin: 0,
+      lineHeight: '1.6'
     },
     settingsRow: {
       display: 'flex',
-      gap: '1rem',
-      marginBottom: '2rem',
+      gap: '1.5rem',
+      marginBottom: '3.5rem',
       flexWrap: 'wrap',
       justifyContent: 'center'
     },
     settingCard: {
       display: 'flex',
       alignItems: 'center',
-      gap: '0.75rem',
-      background: 'rgba(30,41,59,0.8)',
-      padding: '0.75rem 1.25rem',
-      borderRadius: '1rem'
+      gap: '1rem',
+      background: 'rgba(15, 23, 42, 0.6)',
+      padding: '1rem 2rem',
+      borderRadius: '1.5rem',
+      border: '1px solid rgba(255, 255, 255, 0.05)'
     },
     settingLabel: {
-      color: '#94a3b8',
+      color: '#64748b',
       fontSize: '0.75rem',
-      fontWeight: '700',
+      fontWeight: '900',
       textTransform: 'uppercase',
-      letterSpacing: '0.1em'
+      letterSpacing: '0.12em'
     },
     select: {
-      background: '#0f172a',
+      background: 'transparent',
       color: 'white',
       border: 'none',
       borderRadius: '0.5rem',
-      padding: '0.5rem 0.75rem',
-      fontSize: '0.875rem',
-      cursor: 'pointer'
-    },
-    emptyState: {
-      textAlign: 'center',
-      padding: '5rem 2rem',
-      background: 'rgba(15,23,42,0.4)',
-      borderRadius: '2rem',
-      border: '2px dashed #1e293b',
-      width: '100%',
-      maxWidth: '600px'
-    },
-    emptyText: {
-      color: '#64748b',
-      fontSize: '1.1rem',
-      margin: 0
-    },
-    // Camera overlay
-    cameraOverlay: {
-      position: 'fixed',
-      inset: 0,
-      zIndex: 50,
-      background: 'black',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '1rem'
-    },
-    video: {
-      width: '100%',
-      maxWidth: '42rem',
-      height: 'auto',
-      borderRadius: '1.5rem',
-      background: '#0f172a',
-      boxShadow: '0 25px 50px rgba(0,0,0,0.5)'
-    },
-    captureBtn: {
-      padding: '1.5rem',
-      borderRadius: '50%',
-      background: '#6366f1',
-      color: 'white',
-      border: 'none',
+      padding: '0.25rem',
+      fontSize: '1rem',
+      fontWeight: '700',
       cursor: 'pointer',
-      boxShadow: '0 0 30px rgba(99,102,241,0.5)',
-      display: 'flex',
-      alignItems: 'center', justifyContent: 'center'
+      outline: 'none'
     },
     // Step 2
     cropContainer: {
       width: '100%',
-      marginBottom: '1.5rem',
-      background: '#0f172a',
-      overflow: 'auto',
-      borderRadius: '1.5rem',
-      border: '1px solid #334155',
+      marginBottom: '2.5rem',
+      background: '#020617',
+      borderRadius: '2.5rem',
+      border: '1px solid #1e293b',
+      padding: '2rem',
+      maxHeight: '70vh',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'flex-start',
-      padding: '1rem',
-      maxHeight: '75vh',
+      alignItems: 'center',
+      overflow: 'hidden',
+      boxShadow: 'inset 0 0 50px rgba(0,0,0,0.6)'
     },
     cropControls: {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      gap: '1.5rem',
+      gap: '2rem',
       flexWrap: 'wrap',
-      padding: '1rem',
-      background: 'rgba(15,23,42,0.8)',
-      borderRadius: '1.25rem',
-      border: '1px solid rgba(255,255,255,0.05)',
+      padding: '1.5rem',
+      background: 'rgba(15, 23, 42, 0.8)',
+      borderRadius: '2rem',
+      border: '1px solid rgba(255, 255, 255, 0.06)',
       width: '100%'
     },
-    // Step 3
+    cropTip: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '1rem',
+      color: '#818cf8',
+      fontSize: '1rem',
+      fontWeight: '700'
+    },
+    // Progress
     step3wrap: {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       textAlign: 'center',
-      width: '100%'
+      width: '100%',
+      padding: '4rem 0'
     },
     progressBar: {
-      width: '16rem',
-      height: '0.75rem',
-      background: '#1e293b',
+      width: '22rem',
+      height: '12px',
+      background: 'rgba(30, 41, 59, 0.6)',
       borderRadius: '9999px',
       overflow: 'hidden',
-      boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.3)'
+      border: '1px solid rgba(255, 255, 255, 0.05)'
     },
     // Step 4
     editorHeader: {
@@ -427,26 +423,27 @@ export default function App() {
       justifyContent: 'space-between',
       alignItems: 'center',
       width: '100%',
-      maxWidth: '800px',
-      marginBottom: '1.5rem'
+      maxWidth: '850px',
+      marginBottom: '2rem'
     },
     // Recent scans
     scansHeader: {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      marginBottom: '1.5rem',
-      width: '100%'
+      marginBottom: '2.5rem',
+      width: '100%',
+      padding: '0 0.75rem'
     }
   };
 
   return (
-    <div className="container">
+    <div className="container animate-fade-in">
       <header style={S.header}>
-        <h1 style={S.h1}>
-          Scanner<span style={{ color: '#6366f1' }}>Text</span>
-        </h1>
-        <p style={S.subtitle}>Halaman Utama &amp; Editor Word Layout</p>
+        <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}>
+          <h1 style={S.h1}>ScannerText</h1>
+          <p style={S.subtitle}>Ubah foto dokumen menjadi teks dengan akurasi tinggi dan layout profesional ala Word.</p>
+        </motion.div>
       </header>
 
       {step > 1 && <StepIndicator step={step} />}
@@ -458,67 +455,78 @@ export default function App() {
           {step === 1 && (
             <motion.div
               key="step1"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
               style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
             >
-              {/* Action Buttons */}
-              <div style={S.btnGrid}>
-                <button style={S.btnPrimary} onClick={startCamera}
-                  onMouseOver={e => e.currentTarget.style.background='#4f46e5'}
-                  onMouseOut={e => e.currentTarget.style.background='#6366f1'}>
-                  <Camera size={28} /> Scan Document
-                </button>
-                <button style={S.btnSecondary} onClick={() => fileInputRef.current.click()}
-                  onMouseOver={e => e.currentTarget.style.background='#334155'}
-                  onMouseOut={e => e.currentTarget.style.background='#1e293b'}>
-                  <Upload size={28} /> Upload Image
-                </button>
-                <input
-                  type="file"
-                  ref={fileInputRef}
-                  onChange={onFileChange}
-                  style={{ display: 'none' }}
-                  accept="image/*"
-                />
+              <div style={S.hero}>
+                <motion.span 
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  style={S.tag}
+                >
+                  Teknologi OCR Canggih
+                </motion.span>
+                <h2 style={{ color: 'white', fontSize: '2.5rem', fontWeight: '900', margin: 0, fontFamily: "'Outfit', sans-serif" }}>Mulai Scan Sekarang</h2>
+              </div>
+
+              {/* Action Cards */}
+              <div style={S.cardGrid}>
+                <motion.div
+                  style={S.actionCard}
+                  whileHover={{ y: -12, background: 'rgba(30, 41, 59, 0.6)', borderColor: 'rgba(99, 102, 241, 0.4)' }}
+                  onClick={startCamera}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <div style={{ ...S.cardIcon, background: 'linear-gradient(135deg, #6366f1, #4f46e5)', boxShadow: '0 10px 25px rgba(99, 102, 241, 0.4)' }}>
+                    <Camera size={32} />
+                  </div>
+                  <div>
+                    <h3 style={S.cardTitle}>Scan Dokumen</h3>
+                    <p style={S.cardDesc}>Ambil foto langsung menggunakan kamera perangkat Anda dengan panduan layout otomatis.</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  style={S.actionCard}
+                  whileHover={{ y: -12, background: 'rgba(30, 41, 59, 0.6)', borderColor: 'rgba(168, 85, 247, 0.4)' }}
+                  onClick={() => fileInputRef.current.click()}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <div style={{ ...S.cardIcon, background: 'linear-gradient(135deg, #a855f7, #9333ea)', boxShadow: '0 10px 25px rgba(168, 85, 247, 0.4)' }}>
+                    <Upload size={32} />
+                  </div>
+                  <div>
+                    <h3 style={S.cardTitle}>Unggah Gambar</h3>
+                    <p style={S.cardDesc}>Pilih file gambar (JPG, PNG) yang sudah ada di galeri atau folder perangkat Anda.</p>
+                  </div>
+                  <input type="file" ref={fileInputRef} onChange={onFileChange} style={{ display: 'none' }} accept="image/*" />
+                </motion.div>
               </div>
 
               {/* Settings */}
               <div style={S.settingsRow}>
                 <div style={S.settingCard}>
-                  <span style={S.settingLabel}>OCR</span>
+                  <span style={S.settingLabel}>Bahasa OCR</span>
                   <select value={language} onChange={(e) => setLanguage(e.target.value)} style={S.select}>
-                    <option value="ind+eng">ID + EN</option>
+                    <option value="ind+eng">Indo + English</option>
                     <option value="deu">German</option>
-                    <option value="ind+eng+deu">All</option>
+                    <option value="ind+eng+deu">Semua Bahasa</option>
                   </select>
                 </div>
                 <div style={S.settingCard}>
                   <span style={S.settingLabel}>Table Mode</span>
                   <label style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', cursor: 'pointer' }}>
-                    <input
-                      type="checkbox"
-                      checked={isTableMode}
-                      onChange={(e) => setIsTableMode(e.target.checked)}
-                      style={{ position: 'absolute', opacity: 0, width: 0, height: 0 }}
-                    />
-                    <div style={{
-                      width: '2.75rem', height: '1.5rem',
-                      background: isTableMode ? '#6366f1' : '#334155',
-                      borderRadius: '9999px',
-                      position: 'relative',
-                      transition: 'background 0.3s'
-                    }}>
-                      <div style={{
-                        position: 'absolute',
-                        top: '2px',
-                        left: isTableMode ? 'calc(100% - 22px)' : '2px',
-                        width: '1.25rem', height: '1.25rem',
-                        background: 'white',
-                        borderRadius: '50%',
-                        transition: 'left 0.3s'
-                      }} />
+                    <input type="checkbox" checked={isTableMode} onChange={(e) => setIsTableMode(e.target.checked)} style={{ position: 'absolute', opacity: 0, width: 0, height: 0 }} />
+                    <div style={{ width: '2.75rem', height: '1.5rem', background: isTableMode ? '#6366f1' : '#1e293b', borderRadius: '9999px', position: 'relative', transition: 'background 0.3s' }}>
+                      <div style={{ position: 'absolute', top: '2px', left: isTableMode ? 'calc(100% - 22px)' : '2px', width: '1.25rem', height: '1.25rem', background: 'white', borderRadius: '50%', transition: 'left 0.3s' }} />
                     </div>
                   </label>
                 </div>
@@ -526,63 +534,50 @@ export default function App() {
 
               {/* Recent Scans */}
               {pages.length > 0 && (
-                <div style={{ width: '100%' }}>
+                <div style={{ width: '100%', marginTop: '2rem' }}>
                   <div style={S.scansHeader}>
-                    <h2 style={{ color: 'white', fontSize: '1.4rem', fontWeight: 'bold', margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <Files style={{ color: '#818cf8' }} size={22} /> Recent Scans ({pages.length})
+                    <h2 style={{ color: 'white', fontSize: '1.6rem', fontWeight: '900', margin: 0, display: 'flex', alignItems: 'center', gap: '0.75rem', fontFamily: "'Outfit', sans-serif" }}>
+                      <Files style={{ color: '#818cf8' }} size={26} /> Hasil Scan Terbaru ({pages.length})
                     </h2>
-                    <div style={{ display: 'flex', gap: '0.5rem' }}>
-                      <button
-                        style={{ padding: '0.75rem', background: 'rgba(239,68,68,0.15)', color: '#f87171', border: 'none', borderRadius: '0.75rem', cursor: 'pointer', transition: 'all 0.2s' }}
-                        onClick={() => exportToPdf(pages.map(p => p.text))}
-                        title="Download PDF"
-                        onMouseOver={e => { e.currentTarget.style.background='#ef4444'; e.currentTarget.style.color='white'; }}
-                        onMouseOut={e => { e.currentTarget.style.background='rgba(239,68,68,0.15)'; e.currentTarget.style.color='#f87171'; }}
-                      >
-                        <Download size={20} />
+                    <div style={{ display: 'flex', gap: '0.75rem' }}>
+                      <button className="glass-button secondary-button" style={{ padding: '0.75rem' }} onClick={() => exportToPdf(pages.map(p => p.text))} title="Download PDF">
+                        <Download size={22} />
                       </button>
-                      <button
-                        style={{ padding: '0.75rem', background: 'rgba(59,130,246,0.15)', color: '#60a5fa', border: 'none', borderRadius: '0.75rem', cursor: 'pointer', transition: 'all 0.2s' }}
-                        onClick={() => exportToDocx(pages.map(p => p.text))}
-                        title="Download Word"
-                        onMouseOver={e => { e.currentTarget.style.background='#3b82f6'; e.currentTarget.style.color='white'; }}
-                        onMouseOut={e => { e.currentTarget.style.background='rgba(59,130,246,0.15)'; e.currentTarget.style.color='#60a5fa'; }}
-                      >
-                        <FileText size={20} />
+                      <button className="glass-button secondary-button" style={{ padding: '0.75rem' }} onClick={() => exportToDocx(pages.map(p => p.text))} title="Download Word">
+                        <FileText size={22} />
                       </button>
                     </div>
                   </div>
 
                   <div className="dashboard-grid">
                     {pages.map((page, idx) => (
-                      <div key={idx} className="page-card">
-                        <img src={page.image} style={{ width: '100%', height: '12rem', objectFit: 'cover', borderRadius: '1rem', marginBottom: '1rem' }} alt={`Page ${idx + 1}`} />
+                      <motion.div 
+                        key={idx} 
+                        className="page-card"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: idx * 0.1 }}
+                      >
+                        <img src={page.image} style={{ width: '100%', height: '14rem', objectFit: 'cover', borderRadius: '1.5rem', marginBottom: '1.25rem' }} alt={`Halaman ${idx + 1}`} />
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                          <span style={{ fontSize: '0.75rem', fontWeight: 'bold', color: '#64748b', textTransform: 'uppercase' }}>Page {idx + 1}</span>
-                          <button onClick={() => removePage(idx)} style={{ padding: '0.5rem', background: 'transparent', border: 'none', color: '#64748b', cursor: 'pointer', borderRadius: '0.5rem' }}
-                            onMouseOver={e => e.currentTarget.style.color='#f87171'}
-                            onMouseOut={e => e.currentTarget.style.color='#64748b'}>
-                            <Trash2 size={16} />
+                          <span style={{ fontSize: '0.75rem', fontWeight: '800', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Halaman {idx + 1}</span>
+                          <button onClick={() => removePage(idx)} style={{ padding: '0.5rem', background: 'transparent', border: 'none', color: '#64748b', cursor: 'pointer', borderRadius: '0.5rem' }}>
+                            <Trash2 size={20} />
                           </button>
                         </div>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
 
-                  <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #1e293b', textAlign: 'center' }}>
-                    <button style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.875rem', cursor: 'pointer', textDecoration: 'underline' }}
-                      onClick={startOver}
-                      onMouseOver={e => e.currentTarget.style.color='white'}
-                      onMouseOut={e => e.currentTarget.style.color='#64748b'}>
-                      Clear Project
-                    </button>
+                  <div style={{ marginTop: '5rem', paddingBottom: '2rem', textAlign: 'center' }}>
+                    <button style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '0.875rem', cursor: 'pointer', textDecoration: 'underline' }} onClick={startOver}>Mulai Ulang Proyek</button>
                   </div>
                 </div>
               )}
 
               {pages.length === 0 && (
-                <div style={S.emptyState}>
-                  <p style={S.emptyText}>Belum ada dokumen. Mulai scan di atas!</p>
+                <div style={{ textAlign: 'center', padding: '5rem 0', opacity: 0.5 }}>
+                  <p style={{ color: '#64748b', fontSize: '1.1rem' }}>Belum ada dokumen yang diproses.</p>
                 </div>
               )}
             </motion.div>
@@ -590,17 +585,17 @@ export default function App() {
 
           {/* CAMERA OVERLAY */}
           {isCameraOpen && (
-            <div style={S.cameraOverlay}>
+            <div style={{...S.cameraOverlay, background: 'rgba(2, 6, 23, 0.95)', backdropFilter: 'blur(10px)'}}>
               <video ref={videoRef} autoPlay playsInline style={S.video} />
               <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ width: '16rem', aspectRatio: '3/4', border: '2px solid rgba(129,140,248,0.5)', borderRadius: '1rem' }} />
+                <div style={{ width: '20rem', aspectRatio: '1/1.414', border: '2px solid rgba(129,140,248,0.8)', borderRadius: '1.5rem', boxShadow: '0 0 0 1000px rgba(2, 6, 23, 0.6)' }} />
               </div>
-              <div style={{ marginTop: '2rem', display: 'flex', gap: '1.5rem', zIndex: 10 }}>
-                <button style={{ padding: '1rem', borderRadius: '50%', background: '#1e293b', color: 'white', border: 'none', cursor: 'pointer' }} onClick={stopCamera}>
-                  <X size={28} />
+              <div style={{ position: 'absolute', bottom: '3rem', display: 'flex', gap: '2rem', alignItems: 'center' }}>
+                <button style={{ padding: '1.25rem', borderRadius: '50%', background: 'rgba(30, 41, 59, 0.8)', color: 'white', border: '1px solid rgba(255,255,255,0.1)', cursor: 'pointer' }} onClick={stopCamera}>
+                  <X size={32} />
                 </button>
                 <button style={S.captureBtn} onClick={capturePhoto}>
-                  <div style={{ width: '2rem', height: '2rem', borderRadius: '50%', border: '4px solid white' }} />
+                  <div style={{ width: '2.5rem', height: '2.5rem', borderRadius: '50%', border: '5px solid white' }} />
                 </button>
               </div>
             </div>
@@ -614,72 +609,71 @@ export default function App() {
               animate={{ opacity: 1, scale: 1 }}
               style={{ width: '100%', display: 'flex', flexDirection: 'column' }}
             >
-              {/* Aspect Ratio Presets */}
-              <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
-                <span style={{ color: '#94a3b8', fontSize: '0.75rem', fontWeight: 'bold', textTransform: 'uppercase', alignSelf: 'center', marginRight: '0.25rem' }}>Rasio:</span>
-                {[
-                  { label: 'Bebas', ratio: undefined },
-                  { label: 'A4 Portrait', ratio: 1 / Math.SQRT2 },
-                  { label: 'A4 Landscape', ratio: Math.SQRT2 },
-                  { label: '4:3', ratio: 4 / 3 },
-                  { label: '1:1', ratio: 1 },
-                ].map(({ label, ratio }) => (
-                  <button
-                    key={label}
-                    onClick={() => setAspectPreset(label, ratio)}
-                    style={{
-                      padding: '0.35rem 0.85rem',
-                      borderRadius: '0.5rem',
-                      border: 'none',
-                      fontSize: '0.75rem',
-                      fontWeight: '600',
-                      cursor: 'pointer',
-                      background: aspectLock === ratio ? '#6366f1' : 'rgba(30,41,59,0.8)',
-                      color: aspectLock === ratio ? 'white' : '#94a3b8',
-                      transition: 'all 0.2s'
-                    }}
-                  >
-                    {label}
-                  </button>
-                ))}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', width: '100%' }}>
+                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span style={{ color: '#94a3b8', fontSize: '0.75rem', fontWeight: '800', textTransform: 'uppercase', alignSelf: 'center', marginRight: '0.5rem' }}>Pilih Rasio:</span>
+                  {[
+                    { label: 'Bebas', ratio: undefined },
+                    { label: 'A4 Portrait', ratio: 1 / Math.SQRT2 },
+                    { label: 'A4 Landscape', ratio: Math.SQRT2 },
+                  ].map(({ label, ratio }) => (
+                    <button
+                      key={label}
+                      onClick={() => setAspectPreset(label, ratio)}
+                      className="glass-button secondary-button"
+                      style={{
+                        padding: '0.5rem 1rem',
+                        fontSize: '0.8rem',
+                        background: aspectLock === ratio ? 'var(--primary)' : 'rgba(30,41,59,0.5)',
+                        color: aspectLock === ratio ? 'white' : '#94a3b8',
+                        borderColor: aspectLock === ratio ? 'var(--primary)' : 'var(--glass-border)'
+                      }}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+                <button className="glass-button secondary-button" style={{ padding: '0.5rem 1rem', fontSize: '0.8rem' }} onClick={resetCrop}>Reset Area</button>
               </div>
 
-              {/* Crop Area */}
               <div style={S.cropContainer}>
                 <ReactCrop
                   crop={crop}
                   onChange={(c) => setCrop(c)}
-                  onComplete={(c, percentCrop) => setCompletedCrop(c)}
+                  onComplete={(c) => setCompletedCrop(c)}
                   aspect={aspectLock}
-                  minWidth={30}
-                  minHeight={30}
+                  minWidth={50}
+                  minHeight={50}
                   keepSelection
                   ruleOfThirds
-                  style={{ maxWidth: '100%' }}
+                  style={{ maxHeight: '100%' }}
                 >
                   <img
                     ref={imgRef}
                     src={image}
                     alt="Source"
-                    style={{ maxWidth: '100%', maxHeight: '70vh', display: 'block' }}
+                    style={{ maxHeight: '65vh', display: 'block', borderRadius: '0.5rem' }}
                     onLoad={() => {
-                      // Set initial crop covering 90% of image
                       setCrop({ unit: '%', x: 5, y: 5, width: 90, height: 90 });
                     }}
                   />
                 </ReactCrop>
               </div>
 
-              {/* Controls */}
               <div style={S.cropControls}>
-                <p style={{ color: '#64748b', fontSize: '0.8rem', margin: 0 }}>
-                  💡 Drag sudut/tepi kotak untuk resize • Drag dalam kotak untuk pindahkan
-                </p>
-                <div className="flex-center" style={{ gap: '1rem', marginTop: '1rem' }}>
-                  <button className="glass-button secondary-button" style={{ padding: '0.75rem 1.5rem' }} onClick={() => setStep(1)}>Cancel</button>
-                  <button className="glass-button secondary-button" style={{ padding: '0.75rem 1.5rem' }} onClick={resetCrop}>Reset</button>
-                  <button className="glass-button" style={{ padding: '0.75rem 2.5rem' }} onClick={handleApplyCrop}>
-                    <Scissors size={20} /> Process Page
+                <div style={S.cropTip}>
+                  <div style={{ padding: '0.5rem', background: 'rgba(99, 102, 241, 0.15)', borderRadius: '0.75rem' }}>
+                    <Edit3 size={18} />
+                  </div>
+                  <div>
+                    <span style={{ display: 'block' }}>Sesuaikan Area Dokumen</span>
+                    <span style={{ fontSize: '0.75rem', fontWeight: '400', color: '#64748b' }}>Tarik sudut atau sisi kotak untuk hasil scan yang presisi.</span>
+                  </div>
+                </div>
+                <div className="flex-center" style={{ gap: '1rem' }}>
+                  <button className="glass-button secondary-button" style={{ padding: '1rem 1.5rem' }} onClick={() => setStep(1)}>Batal</button>
+                  <button className="glass-button" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }} onClick={handleApplyCrop}>
+                    <CheckCircle size={22} /> Proses Hasil Scan
                   </button>
                 </div>
               </div>
@@ -689,21 +683,21 @@ export default function App() {
           {/* STEP 3: OCR PROCESSING */}
           {step === 3 && (
             <motion.div key="step3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={S.step3wrap}>
-              <div style={{ position: 'relative', marginBottom: '2.5rem' }}>
-                <Loader2 style={{ color: '#6366f1', animation: 'spin 1s linear infinite' }} size={80} />
-                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: '900', color: 'white' }}>
+              <div style={{ position: 'relative', marginBottom: '3rem' }}>
+                <Loader2 style={{ color: '#6366f1', animation: 'spin 1.5s linear infinite' }} size={100} />
+                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.25rem', fontWeight: '900', color: 'white' }}>
                   {ocrProgress}%
                 </div>
               </div>
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '900', color: 'white', margin: '0 0 0.5rem 0', fontFamily: "'Poppins', sans-serif" }}>
-                {ocrProgress < 15 ? "Optimizing..." : "Scanning..."}
+              <h3 style={{ fontSize: '2.5rem', fontWeight: '900', color: 'white', margin: '0 0 0.75rem 0' }}>
+                {ocrProgress < 20 ? "Menginisialisasi..." : ocrProgress < 60 ? "Membaca Teks..." : "Merangkai Layout..."}
               </h3>
-              <p style={{ color: '#94a3b8', marginBottom: '2rem', maxWidth: '20rem', textAlign: 'center' }}>
-                {ocrProgress < 15 ? "Meningkatkan kontras & kejernihan" : "Mengekstrak teks dari gambar"}
+              <p style={{ color: '#94a3b8', marginBottom: '3rem', maxWidth: '30rem' }}>
+                Kecerdasan buatan kami sedang mengekstrak teks dan mengenali format dokumen Anda. Mohon tunggu sebentar.
               </p>
               <div style={S.progressBar}>
                 <motion.div
-                  style={{ height: '100%', background: '#6366f1', boxShadow: '0 0 15px rgba(99,102,241,0.5)' }}
+                  style={{ height: '100%', background: 'linear-gradient(to right, #6366f1, #a855f7)', boxShadow: '0 0 20px rgba(99,102,241,0.5)' }}
                   initial={{ width: 0 }}
                   animate={{ width: `${ocrProgress}%` }}
                 />
@@ -713,43 +707,45 @@ export default function App() {
 
           {/* STEP 4: EDITOR */}
           {step === 4 && (
-            <motion.div key="step4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
+            <motion.div key="step4" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }}
               style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
               <div style={S.editorHeader}>
-                <h3 style={{ color: 'white', fontSize: '1.4rem', fontWeight: 'bold', margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Edit3 style={{ color: '#818cf8' }} size={22} /> Edit Hasil Scan
-                </h3>
-                <button className="glass-button" style={{ background: '#16a34a' }} onClick={saveCurrentPage}
-                  onMouseOver={e => e.currentTarget.style.background='#15803d'}
-                  onMouseOut={e => e.currentTarget.style.background='#16a34a'}>
-                  <CheckCircle size={18} /> Finish &amp; Save
+                <div>
+                  <h3 style={{ color: 'white', fontSize: '1.75rem', fontWeight: '800', margin: 0, display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <Edit3 style={{ color: '#818cf8' }} size={28} /> Editor Hasil Scan
+                  </h3>
+                  <p style={{ color: '#94a3b8', margin: '0.25rem 0 0 0', fontSize: '0.875rem' }}>Lakukan penyesuaian akhir sebelum menyimpan dokumen.</p>
+                </div>
+                <button className="glass-button" style={{ background: '#10b981', boxShadow: '0 10px 20px rgba(16,185,129,0.3)' }} onClick={saveCurrentPage}>
+                  <CheckCircle size={20} /> Simpan Halaman
                 </button>
               </div>
 
               {/* Formatting Toolbar */}
-              <div className="toolbar">
-                <button className="toolbar-btn" onClick={() => applyFormat('bold')} title="Bold"><Bold size={18} /></button>
-                <button className="toolbar-btn" onClick={() => applyFormat('italic')} title="Italic"><Italic size={18} /></button>
-                <div style={{ width: '1px', height: '1.5rem', background: '#334155', margin: '0 4px', alignSelf: 'center' }} />
-                <button className="toolbar-btn" onClick={() => applyFormat('insertUnorderedList')} title="Bullet List"><List size={18} /></button>
+              <div className="toolbar animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <button className="toolbar-btn" onClick={() => applyFormat('bold')} title="Tebal"><Bold size={20} /></button>
+                <button className="toolbar-btn" onClick={() => applyFormat('italic')} title="Miring"><Italic size={20} /></button>
+                <div style={{ width: '1px', height: '1.5rem', background: 'rgba(255,255,255,0.1)', margin: '0 8px', alignSelf: 'center' }} />
+                <button className="toolbar-btn" onClick={() => applyFormat('insertUnorderedList')} title="Daftar Poin"><List size={20} /></button>
               </div>
 
               {/* Word Layout Editor */}
-              <div className="paper-container custom-scrollbar">
+              <div className="paper-container animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <div
                   ref={editorRef}
                   contentEditable
-                  className="paper-page"
+                  className="paper-page custom-scrollbar"
                   suppressContentEditableWarning={true}
+                  style={{ animation: 'none' }}
                 >
                   {ocrResult}
                 </div>
               </div>
 
-              <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '800px', color: '#64748b', fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '0.1em' }}>
-                <span>Font: Inter (Word Standard)</span>
-                <span>Editable Area</span>
+              <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '800px', color: '#475569', fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: '800', letterSpacing: '0.1em' }}>
+                <span>Format: Microsoft Word Standard (A4)</span>
+                <span>Area Dapat Diedit</span>
               </div>
             </motion.div>
           )}
@@ -757,8 +753,8 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      <footer style={{ marginTop: '3rem', textAlign: 'center', color: '#475569', paddingBottom: '2.5rem' }}>
-        <p>&copy; 2026 Professional Document Scanner Dashboard</p>
+      <footer style={{ marginTop: '5rem', textAlign: 'center', color: '#475569', paddingBottom: '4rem' }}>
+        <p style={{ fontSize: '0.875rem' }}>&copy; 2026 Professional Document Scanner &bull; Precision OCR Engine v5.0</p>
       </footer>
 
       <style>{`
@@ -778,30 +774,65 @@ export default function App() {
           border-color: rgba(99,102,241,0.5);
           box-shadow: 0 10px 30px rgba(99,102,241,0.1);
         }
+        /* ReactCrop Overrides for Side Handles */
         .ReactCrop__crop-selection {
-          border: 1.5px solid #6366f1 !important;
-          box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.7) !important;
+          border: 2px solid #6366f1 !important;
+          box-shadow: 0 0 0 9999px rgba(2, 6, 23, 0.75) !important;
         }
+
         .ReactCrop__drag-handle {
-          width: 18px !important;
-          height: 18px !important;
+          width: 20px !important;
+          height: 20px !important;
           background: #6366f1 !important;
           border: 3px solid white !important;
           border-radius: 50% !important;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.4) !important;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
           opacity: 1 !important;
+          transition: transform 0.2s !important;
         }
         .ReactCrop__drag-handle:hover {
-          transform: scale(1.2);
+          transform: scale(1.3);
           background: #818cf8 !important;
         }
+
+        /* Side Handles (Bars) Styling */
         .ReactCrop__drag-bar { 
           background: transparent !important; 
         }
+        .ReactCrop__drag-bar::after {
+          content: "";
+          position: absolute;
+          background: #6366f1;
+          opacity: 0.6;
+          transition: opacity 0.2s;
+        }
+        .ReactCrop__drag-bar:hover::after {
+          opacity: 1;
+        }
+
+        .ReactCrop__drag-bar.ord-n::after, .ReactCrop__drag-bar.ord-s::after {
+          height: 4px;
+          left: 20px;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 2px;
+        }
+        .ReactCrop__drag-bar.ord-e::after, .ReactCrop__drag-bar.ord-w::after {
+          width: 4px;
+          top: 20px;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 2px;
+        }
+
         .ReactCrop__rule-of-thirds-vt::before, .ReactCrop__rule-of-thirds-vt::after,
         .ReactCrop__rule-of-thirds-hz::before, .ReactCrop__rule-of-thirds-hz::after {
-          background-color: rgba(255, 255, 255, 0.3) !important;
+          background-color: rgba(255, 255, 255, 0.25) !important;
+          box-shadow: none !important;
         }
+
         .ReactCrop { border-radius: 1rem; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
       `}</style>
     </div>
