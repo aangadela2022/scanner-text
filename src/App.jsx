@@ -266,11 +266,11 @@ export default function App() {
     },
     btnGrid: {
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '1rem',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+      gap: '1.5rem',
       width: '100%',
-      maxWidth: '600px',
-      marginBottom: '2rem'
+      maxWidth: '800px',
+      marginBottom: '2.5rem'
     },
     btnPrimary: {
       background: '#6366f1',
@@ -397,8 +397,13 @@ export default function App() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      gap: '1rem',
-      flexWrap: 'wrap'
+      gap: '1.5rem',
+      flexWrap: 'wrap',
+      padding: '1rem',
+      background: 'rgba(15,23,42,0.8)',
+      borderRadius: '1.25rem',
+      border: '1px solid rgba(255,255,255,0.05)',
+      width: '100%'
     },
     // Step 3
     step3wrap: {
@@ -670,10 +675,10 @@ export default function App() {
                 <p style={{ color: '#64748b', fontSize: '0.8rem', margin: 0 }}>
                   💡 Drag sudut/tepi kotak untuk resize • Drag dalam kotak untuk pindahkan
                 </p>
-                <div style={{ display: 'flex', gap: '1rem' }}>
-                  <button className="glass-button secondary-button" onClick={() => setStep(1)}>Cancel</button>
-                  <button className="glass-button secondary-button" onClick={resetCrop}>Reset</button>
-                  <button className="glass-button" style={{ padding: '0.75rem 2rem' }} onClick={handleApplyCrop}>
+                <div className="flex-center" style={{ gap: '1rem', marginTop: '1rem' }}>
+                  <button className="glass-button secondary-button" style={{ padding: '0.75rem 1.5rem' }} onClick={() => setStep(1)}>Cancel</button>
+                  <button className="glass-button secondary-button" style={{ padding: '0.75rem 1.5rem' }} onClick={resetCrop}>Reset</button>
+                  <button className="glass-button" style={{ padding: '0.75rem 2.5rem' }} onClick={handleApplyCrop}>
                     <Scissors size={20} /> Process Page
                   </button>
                 </div>
@@ -778,28 +783,26 @@ export default function App() {
           box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.7) !important;
         }
         .ReactCrop__drag-handle {
-          width: 14px !important;
-          height: 14px !important;
-        }
-        .ReactCrop__drag-handle::after {
+          width: 18px !important;
+          height: 18px !important;
           background: #6366f1 !important;
-          border: 2.5px solid white !important;
-          width: 14px !important;
-          height: 14px !important;
-          border-radius: 4px !important;
-          top: 50% !important;
-          left: 50% !important;
-          transform: translate(-50%, -50%) !important;
-          box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
+          border: 3px solid white !important;
+          border-radius: 50% !important;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.4) !important;
+          opacity: 1 !important;
+        }
+        .ReactCrop__drag-handle:hover {
+          transform: scale(1.2);
+          background: #818cf8 !important;
         }
         .ReactCrop__drag-bar { 
           background: transparent !important; 
         }
         .ReactCrop__rule-of-thirds-vt::before, .ReactCrop__rule-of-thirds-vt::after,
         .ReactCrop__rule-of-thirds-hz::before, .ReactCrop__rule-of-thirds-hz::after {
-          background-color: rgba(255, 255, 255, 0.2) !important;
+          background-color: rgba(255, 255, 255, 0.3) !important;
         }
-        .ReactCrop { border-radius: 0.75rem; overflow: hidden; background: #000; }
+        .ReactCrop { border-radius: 1rem; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
       `}</style>
     </div>
   );
